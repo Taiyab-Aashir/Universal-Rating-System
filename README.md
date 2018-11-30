@@ -1,1 +1,2 @@
-# untitled1
+# Universal rating website using django
+
