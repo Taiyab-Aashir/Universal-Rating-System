@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+<h1>Add a new game:</h1>
+ <div>
+ <form id="register_form" method="post" action="/polls/add_game/">
+     {% csrf_token %}
+ <table>
+         {% for field in form.visible_fields %}
+             <tr>
+         {{ field.errors }}
+         <td align="center">{{ field.help_text }}&nbsp;</td>
+         <td align="left">{{ field }}</td>
+
+             </tr>
+         {% endfor %}
+ </table>
+ <input type="submit" name="submit" value="Add this game" />
+
+ </form>
+ </div>
+</body>
+</html>

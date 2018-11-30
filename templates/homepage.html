@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    {% load static %}
+</head>
+<body>
+<div align="center">
+    <h1>
+        Home Page
+    </h1>
+</div>
+<img src="{% static  'downloaded\\Assasins Creed high resolution\\1. assassins-creed-wallpapers-high-quality-hd-images.jpg'  %}">
+<br>
+<br>
+<a href="/polls/register/">Register</a>
+&nbsp;&nbsp;
+&nbsp;
+&nbsp;
+
+<a href="/polls/login/">LOGIN</a>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+<a href="/polls/all_games">View all games</a>
+
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+<a href="/polls/add_game">Add a new game</a>
+<br>
+<H2><strong >Games</strong></H2>
+<br>
+<ul>
+{% for item in names %}
+    <li>
+{{ item }}
+</li>
+{% endfor %}
+</ul>
+</body>
+</html>

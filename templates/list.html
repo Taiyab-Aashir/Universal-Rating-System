@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+</head>
+<body>
+{% for game in games %}
+    <div align="center" style="width: 40%;height: 30%;background-color: lemonchiffon">
+    <h2>{{ game.game_name }}</h2>
+        <pre ><strong style="color: darkred">Launch Year:</strong>{{ game.game_year }}</pre>
+        <pre ><strong style="color: darkred">Manufacturer:</strong>{{ game.game_manufacturer }}</pre>
+    <p  style="color: darkslateblue">{{ game.game_description }}</p>
+    <strong>{{ game.game_rating }}</strong>&nbsp;&nbsp;{{ game.game_type }}
+    </div>
+    <br>
+{% endfor %}
+</body>
+</html>
